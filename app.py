@@ -2,14 +2,7 @@ import streamlit as st
 import PyPDF2
 import docx
 import spacy
-import os
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    # Automatically download the model if it's not present
-    os.system("python -m spacy download en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
 # Load NLP model
 nlp = spacy.load("en_core_web_sm")
 
